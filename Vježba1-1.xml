@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+    <ime>Marko</ime>
+    <prezime>Markovic</prezime>
+    <jmbg>1234567890123</jmbg>
+    <datum_rodjenja>2005-05-12</datum_rodjenja>
+    <godina_studija>2</godina_studija>
+    <studijski_program>Informatika</studijski_program>
+    <adresa>
+        <ulica>Ilica 15</ulica>
+        <grad>Zagreb</grad>
+        <postanski_broj>10000</postanski_broj>
+    </adresa>
+</student>

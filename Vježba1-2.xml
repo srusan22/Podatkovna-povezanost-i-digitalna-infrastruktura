@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+    <ime>Marko</ime>
+    <prezime>Markovic</prezime>
+    <jmbg>1234567890123</jmbg>
+    <datum_rodjenja>2005-05-12</datum_rodjenja>
+    <godina_studija>2</godina_studija>
+
+    <kontakt>
+        <email>marko.markovic@gmail.com</email>
+        <telefon>0911234567</telefon>
+    </kontakt>
+
+    <kolegiji>
+        <kolegij>
+            <naziv>Programiranje</naziv>
+            <profesor>Ivan Ivić</profesor>
+            <ects>6</ects>
+        </kolegij>
+        <kolegij>
+            <naziv>Baze podataka</naziv>
+            <profesor>Marko Marić</profesor>
+            <ects>5</ects>
+        </kolegij>
+        <kolegij>
+            <naziv>Matematika</naziv>
+            <profesor>Ana Aničić</profesor>
+            <ects>7</ects>
+        </kolegij>
+    </kolegiji>
+</student>
