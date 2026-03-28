@@ -13,7 +13,7 @@
             <naslov>Zločin i kazna</naslov>
             <autor>Fjodor Dostojevski</autor>
             <godina_izdanja>1866</godina_izdanja>
-            <zanr>Roman</zanr>
+            <zanr>Roman</zanr> <!—Ovo je element zanr koji opisuje zanr knjige iz tablice -->
             <broj_primjeraka>3</broj_primjeraka>
         </knjiga>
     </knjiznica>
