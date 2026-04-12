@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Narudzba>
+    <Ime>Ivan</Ime>
+    <Prezime>Horvat</Prezime>
+    <MjestoStanovanja>
+        <Adresa>Ulica knezova 10</Adresa>
+        <Grad>Zagreb</Grad>
+        <Drzava>Hrvatska</Drzava>
+    </MjestoStanovanja>
+    <NaruceniArtikl>
+        <Naziv>Laptop Pro 15</Naziv>
+        <Kolicina>1</Kolicina>
+        <Cijena currency="EUR">1200</Cijena>
+    </NaruceniArtikl>
+</Narudzba>
