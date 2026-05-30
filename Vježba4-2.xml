@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Narudzba>
+    <idNarudzbe>10234</idNarudzbe>
+    <statusNarudzbe>Zaprimljeno</statusNarudzbe>
+    <kolicina>25</kolicina>
+    <iznos valuta="EUR">149.99</iznos>
+    <datumKreiranja>2026-05-30</datumKreiranja>
+</Narudzba>
