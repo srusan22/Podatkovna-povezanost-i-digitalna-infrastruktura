@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vježba 6.2 - JSON i Automobili Oznake</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .osoba-info {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .kontejner-automobila {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .kartica-automobila {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 260px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .oznaka {
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .skup {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .povoljan {
+            background-color: #2ecc71;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="osoba-info" id="osoba"></div>
+
+    <h2>Popis automobila</h2>
+    <div class="kontejner-automobila" id="automobili"></div>
+
+    <script>
+        const jsonPodatci = {
+            "ime": "Ivan",
+            "prezime": "Horvat",
+            "automobili": [
+                {
+                    "marka": "Volkswagen",
+                    "modele": "Golf 8",
+                    "godinaProizvodnje": 2021,
+                    "boja": "Crna",
+                    "registriran": true,
+                    "cijena": 22500,
+                    "kilometri": 45000,
+                    "gorivo": "Dizel",
+                    "vlasnik_od": 2022
+                },
+                {
+                    "marka": "Renault",
+                    "modele": "Clio",
+                    "godinaProizvodnje": 2018,
+                    "boja": "Crvena",
+                    "registriran": false,
+                    "cijena": 11000,
+                    "kilometri": 92000,
+                    "gorivo": "Benzin",
+                    "vlasnik_od": 2018
+                },
+                {
+                    "marka": "BMW",
+                    "modele": "Serija 3",
+                    "godinaProizvodnje": 2020,
+                    "boja": "Siva",
+                    "registriran": true,
+                    "cijena": 20000, 
+                    "kilometri": 68000,
+                    "gorivo": "Hibrid",
+                    "vlasnik_od": 2023
+                }
+            ]
+        };
+
+        document.getElementById("osoba").innerHTML = `<h3>Osoba: ${jsonPodatci.ime} ${jsonPodatci.prezime}</h3>`;
+
+        const kontejner = document.getElementById("automobili");
+        
+        jsonPodatci.automobili.forEach(auto => {
+            let tekstOznake = "";
+            let klasaOznake = "";
+
+            if (auto.cijena > 20000) {
+                tekstOznake = "Skuplji automobil";
+                klasaOznake = "skup";
+            } else {
+                tekstOznake = "Povoljniji automobil";
+                klasaOznake = "povoljan";
+            }
+
+            const karticaHTML = `
+                <div class="kartica-automobila">
+                    <h4>${auto.marka} ${auto.modele}</h4>
+                    <p><strong>Godina:</strong> ${auto.godinaProizvodnje}.</p>
+                    <p><strong>Boja:</strong> ${auto.boja}</p>
+                    <p><strong>Registriran:</strong> ${auto.registriran ? 'Da' : 'Ne'}</p>
+                    <p><strong>Kilometri:</strong> ${auto.kilometri.toLocaleString('hr-HR')} km</p>
+                    <p><strong>Gorivo:</strong> ${auto.gorivo}</p>
+                    <p><strong>Vlasnik od:</strong> ${auto.vlasnik_od}. god.</p>
+                    <p><strong>Cijena:</strong> ${auto.cijena.toLocaleString('hr-HR')} EUR</p>
+                    <span class="oznaka ${klasaOznake}">${tekstOznake}</span>
+                </div>
+            `;
+            
+            kontejner.innerHTML += karticaHTML;
+        });
+    </script>
+
+</body>
+</html>
