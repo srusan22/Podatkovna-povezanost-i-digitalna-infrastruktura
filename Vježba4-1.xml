@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<podaci>
+    <ime>Ivan Horvat</ime>
+    <cijena>149.99</cijena>
+    <godine>25</godine>
+    <aktivan>true</aktivan>
+    <datumRodjenja>2001-05-15</datumRodjenja>
+    <vrijemePocetka>08:30:00</vrijemePocetka>
+</podaci>
