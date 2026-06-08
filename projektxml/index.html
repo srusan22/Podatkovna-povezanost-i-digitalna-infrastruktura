@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDM Showcase | XML & JSON Projekt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigacijska traka -->
+    <header>
+        <div class="logo">JDM<span>Showcase</span></div>
+        <nav>
+            <ul>
+                <li><a href="#pocetna">Početna</a></li>
+                <li><a href="#xml-sekcija">XML Modeli</a></li>
+                <li><a href="#json-sekcija">JSON Stilovi</a></li>
+                <li><a href="#kontakt-sekcija">Kontakt & Unos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Početna (Hero) sekcija -->
+    <section id="pocetna" class="hero">
+        <div class="hero-content">
+            <h1>Dobrodošli u JDM Showcase</h1>
+            <p>Projekt koji prikazuje legendarne japanske automobile i stilove koristeći tehnologije XML i JSON.</p>
+            <a href="#xml-sekcija" class="btn">Kreni u pregled</a>
+        </div>
+    </section>
+
+    <!-- XML Sekcija - Automobili -->
+    <section id="xml-sekcija" class="container">
+        <div class="section-title">
+            <h2>Legendarni JDM Modeli (Učitano iz XML-a)</h2>
+            <p>Ovi podaci se dinamički povlače iz lokalne XML datoteke pomoću JavaScripta.</p>
+            <input type="text" id="xmlSearch" placeholder="Pretraži modele (npr. Supra, Nissan)..." onkeyup="filtrirajXML()">
+        </div>
+        <div id="xml-kontejner" class="grid">
+            <!-- JS ovdje ubacuje kartice -->
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- JSON Sekcija - Stilovi -->
+    <section id="json-sekcija" class="container bg-dark">
+        <div class="section-title">
+            <h2>JDM Tuning Stilovi (Učitano iz JSON-a)</h2>
+            <p>Podaci o kulturi tuninga povučeni iz JSON formata.</p>
+        </div>
+        <div id="json-kontejner" class="grid">
+            <!-- JS ovdje ubacuje kartice -->
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Kontakt i Unos Forma -->
+    <section id="kontakt-sekcija" class="container">
+        <div class="section-title">
+            <h2>Dodaj svoj JDM model ili nam se javi</h2>
+            <p>Ispuni formu ispod. Podaci će se simulirano obraditi u željenom formatu.</p>
+        </div>
+
+        <div class="form-wrapper">
+            <form id="jdmForm" onsubmit="obradiFormu(event)">
+                <div class="form-group">
+                    <label for="ime">Tvoje Ime / Nadimak:</label>
+                    <input type="text" id="ime" required>
+                </div>
+                <div class="form-group">
+                    <label for="auto">Model Automobila:</label>
+                    <input type="text" id="auto" placeholder="npr. Mazda RX-7" required>
+                </div>
+                <div class="form-group">
+                    <label for="format">Željeni format spremanja:</label>
+                    <select id="format">
+                        <option value="XML">Spremi kao XML strukturu</option>
+                        <option value="JSON">Spremi kao JSON objekt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="poruka">Kratak opis / Poruka:</label>
+                    <textarea id="poruka" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Pošalji i generiraj kod</button>
+            </form>
+
+            <!-- Prozor za prikaz generiranog koda (Odlično za video!) -->
+            <div id="rezultat-kod" class="kod-prikaz" style="display: none;">
+                <h3>Generirani kod na backendu:</h3>
+                <pre id="kod-ispis"></pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 JDM Showcase Projekt. Sva prava pridržana.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
